@@ -1,0 +1,72 @@
+.class public Ls3/h;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ls3/e;
+
+
+# static fields
+.field private static final a:Ls3/h;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Ls3/h;
+
+    invoke-direct {v0}, Ls3/h;-><init>()V
+
+    sput-object v0, Ls3/h;->a:Ls3/h;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static d()Ls3/e;
+    .registers 1
+
+    sget-object v0, Ls3/h;->a:Ls3/h;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()J
+    .registers 3
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final b()J
+    .registers 3
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final c()J
+    .registers 3
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
